@@ -1,0 +1,122 @@
+/*
+ * WorldOS Web Portal Styles
+ * This file contains the styling for the WorldOS landing page.
+ */
+
+/* Reset margins and paddings */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables for colours and fonts */
+:root {
+  --color-bg: #0f172a;
+  --color-primary: #3b82f6;
+  --color-secondary: #1e293b;
+  --color-accent: #d946ef;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --radius: 12px;
+  --transition: 0.25s ease-in-out;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Container to limit width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-bg));
+  padding: 6rem 0;
+  text-align: center;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+}
+.hero-description {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--color-muted);
+}
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+.cta:hover {
+  background-color: #2563eb;
+}
+
+/* Features section */
+.features {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+.card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--color-secondary);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
